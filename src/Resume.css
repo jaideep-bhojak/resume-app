@@ -1,0 +1,193 @@
+:root {
+  --bg-color: #f4f6f8;
+  --text-color: #1a1a1a;
+  --card-bg: #ffffff;
+  --accent-color: #0077ff;
+  --border-radius: 10px;
+  --transition-speed: 0.3s;
+}
+
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --card-bg: #1e1e1e;
+  --accent-color: #66b2ff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.resume {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.resume h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+  text-align: center;
+}
+
+.resume p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.resume section {
+  margin-top: 2rem;
+}
+
+.resume h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.3rem;
+}
+
+.resume ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.resume ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.resume ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+}
+
+button {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+}
+
+button:hover {
+  background-color: #005fcc;
+}
+
+
+.experience-section {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.job-card {
+  background-color: #fff;
+  border-left: 4px solid #0078d4;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 6px;
+}
+
+.job-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #0078d4;
+  margin-bottom: 0.25rem;
+}
+
+.company-name {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.25rem;
+}
+
+.job-duration {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.job-description {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #444;
+}
+
+.job-description li::before {
+  content: "💼"; /* You can change this to any emoji or symbol */
+  margin-right: 8px;
+  color: #0078D7;
+  font-size: 1em;
+}
+
+
+.experience {
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 4px solid #0078D7;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 30px 10px 20px 10px; /* top, right, bottom, left */
+ /* Adds top/bottom margin and centers horizontally */
+  display: block;    /* Ensures margin auto works for centering */
+}
+
+
+.experience h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.experience .company {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.experience .description {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #444;
+}
+
+.experience .description li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}

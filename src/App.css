@@ -1,38 +1,210 @@
-.App {
-  text-align: center;
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --card-bg: #fff;
+  --accent: #0077ff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --card-bg: #1e1e1e;
+  --accent: #66b2ff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  padding: 1rem;
+}
+
+.layout {
+  display: flex;
+  gap: 2rem;
+}
+
+.sidebar {
+  width: 250px;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.profile-pic {
+  width: 70%;
+  
+  margin-bottom: 1rem;
+  
+}
+
+.available {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.contact a {
+  display: block;
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0.2rem 0;
+}
+
+.main-content {
+  flex: 1;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.bio {
+  margin: 1rem 0;
+}
+
+.stats-expanded {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.job {
+  margin-top: 1rem;
+}
+
+.theme-toggle {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+.available {
+  transition: background-color 0.3s ease;
+}
+.available:hover {
+  background-color: var(--accent);
+  opacity: 0.9;
+}
+
+.job {
+  transition: transform 0.3s ease;
+}
+.job:hover {
+  transform: translateY(-5px);
+}
+
+
+.experience {
+  margin-top: 2rem;
+}
+
+.experience-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.experience-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+}
+
+.experience-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.experience-card h4 {
+  margin: 0.3rem 0;
+  font-weight: normal;
+  color: var(--text-color);
+}
+
+.experience-card .duration {
+  font-size: 0.85rem;
+  color: gray;
+  margin-bottom: 0.5rem;
+}
+
+.experience-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  word-wrap: break-word;         /* Ensures long words break */
+  overflow-wrap: break-word;     /* Modern alternative */
+  white-space: normal;           /* Allows wrapping */
+  max-width: 100%;               /* Prevents overflow */
+}
+
+
+.skills {
+  margin-top: 2rem;
+}
+
+.skills-list {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+}
+
+.skill-item p {
+  margin: 0 0 0.3rem;
+  font-weight: 500;
+}
+
+.skill-bar {
+  background-color: #ddd;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 4px;
+}
+
+.skill-label {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.skill-icon {
+  font-size: 1.2rem;
+  color: var(--accent);
 }
