@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import profilePicture from '../assets/IMG.jpg';
 
 const Sidebar = () => {
-  const { name, title, location, available, contact, stats, company } = resumeData;
+  const { name, title, contact, company } = resumeData;
 
   return (
     <motion.div
@@ -22,7 +22,7 @@ const Sidebar = () => {
       <div className="contact">
         <p>Email: {contact.email}</p>
         <p>Phone: {contact.phone}</p>
-        <a href={contact.social.linkedin} target="_blank">LinkedIn</a>
+        <a href={contact.social.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
         {/* <a href={contact.dribbble}>Dribbble</a> */}
       </div>
       

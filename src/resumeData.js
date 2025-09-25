@@ -1,10 +1,8 @@
-import { FaAngular, FaDatabase, FaFigma, FaJava, FaSalesforce } from 'react-icons/fa';
-import { MdDesignServices, MdOutlineDesignServices } from 'react-icons/md';
-import { SiAdobexd, SiFramer } from 'react-icons/si';
-import { DiJava } from 'react-icons/di';
-import { IoCarSharp, IoDiscSharp } from 'react-icons/io5';
+import { FaAngular, FaDatabase, FaJava, FaSalesforce } from 'react-icons/fa';
+
+
 import { FaCode } from "react-icons/fa";
-import csharpIcon from "./assets/Logo_C_sharp.svg";
+
 
 
 const resumeData = {
